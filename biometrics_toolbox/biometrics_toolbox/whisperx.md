@@ -1,4 +1,4 @@
-## <i class="fas fa-hammer"></i> Speech to Text ("bare-metal")
+## <i class="fas fa-hammer"></i> Speech to Text 
 
 To generate a transcript of your audio file, you can run the following commands in your terminal:
 
