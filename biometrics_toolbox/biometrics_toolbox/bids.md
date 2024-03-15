@@ -1,8 +1,6 @@
 # Organizing Audio Data: A BIDS-Inspired Approach
 
-## Introduction
-
-Organizing audio data effectively is crucial for efficient data retrieval, analysis, and sharing. Inspired by the Brain Imaging Data Structure (BIDS), a standardized format for organizing and describing neuroimaging data[^1^][3], we propose a similar methodology for audio data.
+Organizing audio data effectively is crucial for efficient data retrieval, analysis, and sharing. Inspired by the Brain Imaging Data Structure (BIDS), a standardized format for organizing and describing neuroimaging data, we propose a similar methodology for audio data.
 
 ## BIDS for Audio Data
 
