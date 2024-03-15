@@ -1,6 +1,6 @@
 # Quality Control Methods for Voice Data
 
-Voice data quality control is crucial for ensuring the accuracy and reliability of speech recognition systems, voice assistants, and other audio processing applications. This guide will introduce some common methods and metrics used in voice data quality control.
+Voice data quality control is crucial for ensuring the accuracy and reliability of speech recognition systems or other audio processing applications that we use further in the pipeline. This guide will introduce some common methods and metrics used in voice data quality control.
 
 ## Sox: A Powerful Audio Manipulation Tool
 
