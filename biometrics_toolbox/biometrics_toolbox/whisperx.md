@@ -16,7 +16,7 @@ WhisperX is an automatic speech recognition system developed by OpenAI. It provi
 ## Features
 
 - **Multispeaker ASR**: WhisperX uses speaker diarization from pyannote-audio, which allows it to identify different speakers in an audio file[^1^][4].
-- **VAD Preprocessing**: This feature reduces hallucination and batching with no WER degradation[^1^].
+- **VAD Preprocessing**: This feature reduces hallucination and batching with no WER degradation [^1^].
 
 ## Installation
 
