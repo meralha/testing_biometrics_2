@@ -37,5 +37,5 @@ To utilize WhisperX, follow the steps outlined below:
 
 ## Conclusion
 
-WhisperX represents a significant advancement in the field of automatic speech recognition. Its ability to provide word-level timestamps and speaker diarization makes it an invaluable tool for transcribing long audio files. However, users should be cognizant of its limitations when dealing with particularly short or long audio files, and when differentiating between similar sounding speakers.
+WhisperX is an incredibly useful tool in the field of automatic speech recognition. Its ability to provide word-level timestamps and speaker diarization makes it invaluable for transcribing long audio files. However, users should be cognizant of its limitations when dealing with particularly short or long audio files, and when differentiating between similar sounding speakers.
 
