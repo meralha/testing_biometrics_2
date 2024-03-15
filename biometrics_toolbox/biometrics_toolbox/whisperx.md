@@ -1,19 +1,25 @@
 ## <i class="fas fa-hammer"></i> Speech to Text 
 
-# WhisperX: Automatic Speech Recognition
+# An In-depth Exploration of WhisperX: A Cutting-Edge Automatic Speech Recognition System
 
-## Introduction
+WhisperX is a state-of-the-art automatic speech recognition (ASR) system, developed by OpenAI. It is designed to provide rapid transcription services, complete with word-level timestamps and speaker diarization.
 
-WhisperX is an automatic speech recognition system developed by OpenAI. It provides fast transcription (70x realtime with large-v2) with word-level timestamps and speaker diarization.
+## Key Features
 
-## Features
+- **Multispeaker ASR**: WhisperX incorporates speaker diarization from pyannote-audio, a feature that enables the system to distinguish between different speakers within an audio file.
+- **Voice Activity Detection (VAD) Preprocessing**: This feature mitigates hallucination and batching issues without any degradation in Word Error Rate (WER).
 
-- **Multispeaker ASR**: WhisperX uses speaker diarization from pyannote-audio, which allows it to identify different speakers in an audio file.
-- **VAD Preprocessing**: This feature reduces hallucination and batching with no WER degradation.
+## Potential Challenges
 
-## Installation
+Despite its advanced capabilities, users of WhisperX should be aware of certain limitations:
 
-You can install WhisperX by following these steps:
+- **Short Audio Files**: WhisperX may not perform optimally with extremely short audio files (less than one second in duration).
+- **Long Audio Files**: For audio files exceeding 10 minutes in length, WhisperX may occasionally hallucinate, resulting in the repetition of certain phrases.
+- **Speaker Diarization**: The diarization feature of pyannote may struggle to differentiate between speakers with very similar vocal characteristics.
+
+## Installation Procedure
+
+To utilize WhisperX, follow the steps outlined below:
 
 1. Create a Python3.10 environment: 
     ```
@@ -28,14 +34,8 @@ You can install WhisperX by following these steps:
     ```
     pip install git+https://github.com/m-bain/whisperx.git
     ```
-To generate a transcript of your audio file, you can run the following commands in your terminal:
-
-```bash
-
-whisperx $audio --model large-v2 --align_model WAV2VEC2_ASR_LARGE_LV60K_960H --batch_size 16
-
-```
 
 ## Conclusion
 
-WhisperX is a powerful tool for automatic speech recognition. Its ability to provide word-level timestamps and speaker diarization makes it a valuable resource for transcribing long audio files.
+WhisperX represents a significant advancement in the field of automatic speech recognition. Its ability to provide word-level timestamps and speaker diarization makes it an invaluable tool for transcribing long audio files. However, users should be cognizant of its limitations when dealing with particularly short or long audio files, and when differentiating between similar sounding speakers.
+
