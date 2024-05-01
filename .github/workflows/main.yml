@@ -25,7 +25,7 @@ jobs:
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build biometrics_toolbox
+        jupyter-book build biometrics_toolbox/biometrics_toolbox
    
 
     # Push the book's HTML to github-pages
