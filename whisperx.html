@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Speech to Text (“bare-metal”) &#8212; Biometrics Toolbox</title>
+    <title>Speech to Text &#8212; Biometrics Toolbox</title>
   
   
   
@@ -42,7 +42,7 @@
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -60,7 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'whisperx';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <link rel="next" title="&lt;no title&gt;" href="beep.html" />
+    <link rel="prev" title="Organizing Audio Data: A BIDS-Inspired Approach" href="Bids.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,7 +180,9 @@
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><i class="fas fa-hammer"></i> Speech to Text (“bare-metal”)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bids.html">Organizing Audio Data: A BIDS-Inspired Approach</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><i class="fas fa-hammer"></i> Speech to Text</a></li>
+
 </ul>
 
     </div>
@@ -352,7 +355,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -363,11 +368,27 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><i class="fas fa-hammer"></i> Speech to Text (“bare-metal”)</h1>
+    <h1><i class="fas fa-hammer"></i> Speech to Text</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><i class="fas fa-hammer"></i> Speech to Text</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#an-in-depth-exploration-of-whisperx-a-cutting-edge-automatic-speech-recognition-system">An In-depth Exploration of WhisperX: A Cutting-Edge Automatic Speech Recognition System</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">Key Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-challenges">Potential Challenges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-procedure">Installation Procedure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -377,12 +398,54 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="speech-to-text-bare-metal">
-<h1><i class="fas fa-hammer"></i> Speech to Text (“bare-metal”)<a class="headerlink" href="#speech-to-text-bare-metal" title="Link to this heading">#</a></h1>
-<p>To generate a transcript of your audio file, you can run the following commands in your terminal:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>whisperx<span class="w"> </span><span class="nv">$audio</span><span class="w"> </span>--model<span class="w"> </span>large-v2<span class="w"> </span>--align_model<span class="w"> </span>WAV2VEC2_ASR_LARGE_LV60K_960H<span class="w"> </span>--batch_size<span class="w"> </span><span class="m">16</span>
+  <section id="speech-to-text">
+<h1><i class="fas fa-hammer"></i> Speech to Text<a class="headerlink" href="#speech-to-text" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="an-in-depth-exploration-of-whisperx-a-cutting-edge-automatic-speech-recognition-system">
+<h1>An In-depth Exploration of WhisperX: A Cutting-Edge Automatic Speech Recognition System<a class="headerlink" href="#an-in-depth-exploration-of-whisperx-a-cutting-edge-automatic-speech-recognition-system" title="Link to this heading">#</a></h1>
+<p>WhisperX is a state-of-the-art automatic speech recognition (ASR) system, developed by OpenAI. It is designed to provide rapid transcription services, complete with word-level timestamps and speaker diarization.</p>
+<section id="key-features">
+<h2>Key Features<a class="headerlink" href="#key-features" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Multispeaker ASR</strong>: WhisperX incorporates speaker diarization from pyannote-audio, a feature that enables the system to distinguish between different speakers within an audio file.</p></li>
+<li><p><strong>Voice Activity Detection (VAD) Preprocessing</strong>: This feature mitigates hallucination and batching issues without any degradation in Word Error Rate (WER).</p></li>
+</ul>
+</section>
+<section id="potential-challenges">
+<h2>Potential Challenges<a class="headerlink" href="#potential-challenges" title="Link to this heading">#</a></h2>
+<p>Despite its advanced capabilities, users of WhisperX should be aware of certain limitations:</p>
+<ul class="simple">
+<li><p><strong>Short Audio Files</strong>: WhisperX may not perform optimally with extremely short audio files (less than one second in duration).</p></li>
+<li><p><strong>Long Audio Files</strong>: For audio files exceeding 10 minutes in length, WhisperX may occasionally hallucinate, resulting in the repetition of certain phrases.</p></li>
+<li><p><strong>Speaker Diarization</strong>: The diarization feature of pyannote may struggle to differentiate between speakers with very similar vocal characteristics.</p></li>
+</ul>
+</section>
+<section id="installation-procedure">
+<h2>Installation Procedure<a class="headerlink" href="#installation-procedure" title="Link to this heading">#</a></h2>
+<p>To utilize WhisperX, follow the steps outlined below:</p>
+<ol class="arabic">
+<li><p>Create a Python3.10 environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">whisperx</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.10</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">whisperx</span>
 </pre></div>
 </div>
+</li>
+<li><p>Install PyTorch:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">pytorch</span><span class="o">==</span><span class="mf">2.0.0</span> <span class="n">torchaudio</span><span class="o">==</span><span class="mf">2.0.0</span> <span class="n">pytorch</span><span class="o">-</span><span class="n">cuda</span><span class="o">=</span><span class="mf">11.8</span> <span class="o">-</span><span class="n">c</span> <span class="n">pytorch</span> <span class="o">-</span><span class="n">c</span> <span class="n">nvidia</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install WhisperX:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">m</span><span class="o">-</span><span class="n">bain</span><span class="o">/</span><span class="n">whisperx</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>WhisperX is an incredibly useful tool in the field of automatic speech recognition. Its ability to provide word-level timestamps and speaker diarization makes it invaluable for transcribing long audio files. However, users should be cognizant of its limitations when dealing with particularly short or long audio files, and when differentiating between similar sounding speakers.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -416,13 +479,22 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="markdown-notebooks.html"
+       href="Bids.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+        <p class="prev-next-title">Organizing Audio Data: A BIDS-Inspired Approach</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="beep.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -431,7 +503,28 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><i class="fas fa-hammer"></i> Speech to Text</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#an-in-depth-exploration-of-whisperx-a-cutting-edge-automatic-speech-recognition-system">An In-depth Exploration of WhisperX: A Cutting-Edge Automatic Speech Recognition System</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">Key Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-challenges">Potential Challenges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-procedure">Installation Procedure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
