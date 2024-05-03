@@ -18,5 +18,6 @@ The Signal-to-Noise Ratio (SNR) is a measure that compares the level of a desire
 
 For voice data, maintaining a good SNR is crucial. If the SNR is too low, the speech signal might be drowned out by the noise, making it challenging for speech recognition systems to accurately transcribe the audio.
 
+## Key Point
 
 Quality control in voice data is essential to ensure the effectiveness of any system that processes or uses this data. Tools like SoX and metrics such as average loudness and SNR are valuable for this purpose. By understanding and applying these methods, we can improve the quality of our voice data and the systems that use it.
