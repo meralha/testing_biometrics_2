@@ -27,10 +27,10 @@ jobs:
       run: |
         jupyter-book build biometrics_toolbox/biometrics_toolbox
    
-
-    # Push the book's HTML to github-pages
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GH_PAT }} # Use your PAT here
         publish_dir: biometrics_toolbox/biometrics_toolbox/_build/html
+
+
