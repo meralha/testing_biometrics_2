@@ -40,4 +40,4 @@ In this structure:
 - `audio` directory contains the audio files and their corresponding JSON files containing metadata.
 - `task-description` is a short label of the task performed during the recording.
 
-This structure allows for easy navigation and retrieval of specific audio files, making it highly efficient for large datasets. Downstream processing can conveniently follow this structure. 
+This structure allows for easy navigation and retrieval of specific audio files, making it highly efficient for large datasets. Downstream processing can conveniently follow this structure to allow conserved filepaths.
