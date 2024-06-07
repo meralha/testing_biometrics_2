@@ -8,6 +8,4 @@ chapters:
 - file: notebooks
 - file: markdown-notebooks
 - file: Bids
-- file: whisperx
-- file: beep
 - file: features
