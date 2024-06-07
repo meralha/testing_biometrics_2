@@ -382,8 +382,8 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Source Features</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-features">Filter Features</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Source Features</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Filter Features</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#spectral-features">Spectral Features</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prosodic-features">Prosodic Features</a></li>
 </ul>
 
             </nav>
@@ -476,8 +476,8 @@ document.write(`
 </table>
 </div>
 </section>
-<section id="id1">
-<h1>Source Features<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="spectral-features">
+<h1>Spectral Features<a class="headerlink" href="#spectral-features" title="Link to this heading">#</a></h1>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Acoustic feature</p></th>
@@ -485,42 +485,18 @@ document.write(`
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Source features</p></td>
-<td><p>Features reflecting airflow from the lungs through the glottis (i.e. glottal features) or vocal fold vibrations (i.e., voice quality features), which is the sound source later filtered by the vocal tract following the source-filter theory of speech production. 29</p></td>
+<tr class="row-even"><td><p>Spectral features</p></td>
+<td><p>Features characterizing the spectrum of speech, which is the frequency distribution of the speech signal at a specific time. 29</p></td>
 </tr>
-<tr class="row-odd"><td><p>Jitter [%]</p></td>
-<td><p>Deviations in individual consecutive f0 period lengths, which indicates irregular closure and asymmetric vocal-fold vibrations.</p></td>
-</tr>
-<tr class="row-even"><td><p>Shimmer [%]</p></td>
-<td><p>Difference of the peak amplitudes of consecutive f0 periods, which indicates irregularities in voice intensity.</p></td>
-</tr>
-<tr class="row-odd"><td><p>Tremor [Hz]</p></td>
-<td><p>Frequency of the most intense low-frequency fundamental frequency-modulating component in a specified analysis range.</p></td>
-</tr>
-<tr class="row-even"><td><p>Harmonics-to-noise ratio (HNR) [dB]</p></td>
-<td><p>Ratio between f0 and noise components, which indirectly correlates with perceived aspiration. This may be due to reducing laryngeal muscle tension resulting in a more open, turbulent glottis. 56</p></td>
-</tr>
-<tr class="row-odd"><td><p>Frequency disturbance ratio (FDR) 1%]</p></td>
-<td><p>Relative mean value of the frequency disturbance from 5 to 5 periods (five points average) 60.</p></td>
-</tr>
-<tr class="row-even"><td><p>Amplitude Disturbance ratio (ADR %)</p></td>
-<td><p>Relative mean amplitude value over a set of windows. 108</p></td>
-</tr>
-<tr class="row-odd"><td><p>Quasi-open quotient (QOQ)</p></td>
-<td><p>Ratio of the vocal folds’ opening time. Functional dysphonias often reduce Q0Q range. Speaking loudly requires more effort with a low QOQ and sounds more stalled</p></td>
-</tr>
-<tr class="row-even"><td><p>Normalized amplitude quotient (NAQ)</p></td>
-<td><p>Ratio between peak-to-peak pulse amplitude and the negative peak of the differentiated flow glottogram and normalized with respect to the period time. It can be an estimate of glottal adduction.</p></td>
-</tr>
-<tr class="row-odd"><td><p>Peak slope</p></td>
-<td><p>Slope of the regression line that is fit to log 10 of the maxima of each frame. 116</p></td>
+<tr class="row-odd"><td><p>Mel-frequency cepstral coefficients (MFCCs)</p></td>
+<td><p>The coefficients derived by computing a spectrum of the log-magnitude Mel-spectrum of the audio segment. The lower coefficients represent the vocal tract filter and the higher coefficients represent periodic vocal fold sources.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="id2">
-<h1>Filter Features<a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
+<section id="prosodic-features">
+<h1>Prosodic Features<a class="headerlink" href="#prosodic-features" title="Link to this heading">#</a></h1>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Acoustic feature</p></th>
@@ -528,29 +504,53 @@ document.write(`
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Filter features</p></td>
-<td><p>The resonant properties of the vocal and nasal tracts filter the sound source from the vocal folds: the filter attenuates certain frequencies and strengthens others by the shape of the vocal and nasal tracts.</p></td>
+<tr class="row-even"><td><p>Prosodic features</p></td>
+<td><p>Changes over longer segments of time, which is perceived in the rhythm, stress, and intonation of speech. 29</p></td>
 </tr>
-<tr class="row-odd"><td><p>F1 mean [Hz]</p></td>
-<td><p>First peak in the spectrum (especially of voiced utterances such as vowels) that results from a resonance of the human vocal tract</p></td>
+<tr class="row-odd"><td><p>fO mean Hz</p></td>
+<td><p>Fundamental frequency: lowest frequency of the speech signal, perceived as pitch (mean, median)</p></td>
 </tr>
-<tr class="row-even"><td><p>F2 mean [Hz]</p></td>
-<td><p>Second peak in the spectrum (especially of voiced utterances such as vowels) that results from a resonance of the human vocal tract.</p></td>
+<tr class="row-even"><td><p>f0 variability [Hz]</p></td>
+<td><p>Measures of dispersion of f0 (variance, standard deviation).</p></td>
 </tr>
-<tr class="row-odd"><td><p>F1 variability [Hz]</p></td>
-<td><p>Measures of dispersion of F1 (variance, standard deviation).</p></td>
+<tr class="row-odd"><td><p>fO range [Hz]</p></td>
+<td><p>Difference between the lowest and highest f0 values.</p></td>
 </tr>
-<tr class="row-even"><td><p>F2 variability [Hz]</p></td>
-<td><p>Measures of dispersion of F2 (variance, standard deviation).</p></td>
+<tr class="row-even"><td><p>Intensity [dB]</p></td>
+<td><p>Defined as the acoustic intensity (i.e., power carried by sound per unit area in a direction perpendicular to that area) in decibels relative to a reference value, perceived as loudness.</p></td>
 </tr>
-<tr class="row-odd"><td><p>F1 range [Hz]</p></td>
-<td><p>Difference between the lowest and highest F1 values.</p></td>
+<tr class="row-odd"><td><p>Intensity variability [dB]</p></td>
+<td><p>Measures of dispersion of intensity (variance, standard deviation).</p></td>
 </tr>
-<tr class="row-even"><td><p>Vowel space</p></td>
-<td><p>F1 and F2 2D space for the vowels /al, lil, /u/.74</p></td>
+<tr class="row-even"><td><p>Energy velocity</p></td>
+<td><p>Measured as the mean-squared central difference across frames and may correlate with motor coordination 65.</p></td>
 </tr>
-<tr class="row-odd"><td><p>Linear predictive coding (LPC) coefficients</p></td>
-<td><p>Coefficients that best predict the values of the next time point of the audio signal using the values from the previous n time points, which is used to reconstruct filter properties.</p></td>
+<tr class="row-odd"><td><p>Maximum phonation time [s]</p></td>
+<td><p>The mean of three attempts of the following measure is taken: the maximum time during which phonation of a vowel (usually /a/) is sustained as long as possible with an upright position, deep breath, and a comfortable pitch and loudness 66</p></td>
+</tr>
+<tr class="row-even"><td><p>Speech rate</p></td>
+<td><p>Number of speech utterances per second over the duration of the speech sample (including pauses).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Articulation rate</p></td>
+<td><p>Number of speech units per second over the duration of the speech sample (excluding pauses).</p></td>
+</tr>
+<tr class="row-even"><td><p>Time talking [s]</p></td>
+<td><p>Sum of the duration of all speech segments.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Utterance duration mean [s]</p></td>
+<td><p>Mean duration of utterance length.</p></td>
+</tr>
+<tr class="row-even"><td><p>Pause duration mean [s]</p></td>
+<td><p>Mean duration of pause length.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pause variability [s]</p></td>
+<td><p>Measures of dispersion of pause duration (variance, standard deviation).</p></td>
+</tr>
+<tr class="row-even"><td><p>Pause rate [s]</p></td>
+<td><p>Total length of pauses divided by the total length of speech (including pauses).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pauses total [s]</p></td>
+<td><p>Total duration of pauses.</p></td>
 </tr>
 </tbody>
 </table>
@@ -614,8 +614,8 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Source Features</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-features">Filter Features</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Source Features</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Filter Features</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#spectral-features">Spectral Features</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prosodic-features">Prosodic Features</a></li>
 </ul>
 
   </nav></div>
