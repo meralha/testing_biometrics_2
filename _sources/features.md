@@ -7,8 +7,8 @@
 | Shimmer [%] | Difference of the peak amplitudes of consecutive f0 periods, which indicates irregularities in voice intensity. |
 | Tremor [Hz] | Frequency of the most intense low-frequency fundamental frequency-modulating component in a specified analysis range. |
 | Harmonics-to-noise ratio (HNR) [dB] | Ratio between f0 and noise components, which indirectly correlates with perceived aspiration. This may be due to reducing laryngeal muscle tension resulting in a more open, turbulent glottis. |
-| Frequency disturbance ratio (FDR) 1%] | Relative mean value of the frequency disturbance from 5 to 5 periods (five points average). |
-| Amplitude Disturbance ratio (ADR %) | Relative mean amplitude value over a set of windows. |
+| Frequency disturbance ratio (FDR) [%] | Relative mean value of the frequency disturbance from 5 to 5 periods (five points average). |
+| Amplitude Disturbance ratio (ADR) [%] | Relative mean amplitude value over a set of windows. |
 | Quasi-open quotient (QOQ) | Ratio of the vocal folds' opening time. Functional dysphonias often reduce QOQ range. Speaking loudly requires more effort with a low QOQ and sounds more stalled. |
 | Normalized amplitude quotient (NAQ) | Ratio between peak-to-peak pulse amplitude and the negative peak of the differentiated flow glottogram and normalized with respect to the period time. It can be an estimate of glottal adduction. |
 | Peak slope | Slope of the regression line that is fit to log 10 of the maxima of each frame. |
@@ -38,9 +38,9 @@
 | Acoustic feature | Description |
 | --- | --- |
 | Prosodic features | Changes over longer segments of time, which is perceived in the rhythm, stress, and intonation of speech. |
-| fO mean Hz | Fundamental frequency: lowest frequency of the speech signal, perceived as pitch (mean, median). |
+| f0 mean [Hz] | Fundamental frequency: lowest frequency of the speech signal, perceived as pitch (mean, median). |
 | f0 variability [Hz] | Measures of dispersion of f0 (variance, standard deviation). |
-| fO range [Hz] | Difference between the lowest and highest f0 values. |
+| f0 range [Hz] | Difference between the lowest and highest f0 values. |
 | Intensity [dB] | Defined as the acoustic intensity (i.e., power carried by sound per unit area in a direction perpendicular to that area) in decibels relative to a reference value, perceived as loudness. |
 | Intensity variability [dB] | Measures of dispersion of intensity (variance, standard deviation). |
 | Energy velocity | Measured as the mean-squared central difference across frames and may correlate with motor coordination. |
