@@ -1,4 +1,4 @@
-## Glossary of acoustic features
+## Glossary of acoustic features From {cite:p}`low2020automated`
 ### Source Features
 
 | Acoustic feature | Description |
@@ -55,7 +55,7 @@
 | Pause rate [s] | Total length of pauses divided by the total length of speech (including pauses). |
 | Pauses total [s] | Total duration of pauses. |
 
-From {cite}`low2020automated`
+
 
 ```{bibliography}
 ```
