@@ -53,3 +53,8 @@
 | Pause variability [s] | Measures of dispersion of pause duration (variance, standard deviation). |
 | Pause rate [s] | Total length of pauses divided by the total length of speech (including pauses). |
 | Pauses total [s] | Total duration of pauses. |
+
+From {cite}`low2020automated`
+
+```{bibliography}
+```
