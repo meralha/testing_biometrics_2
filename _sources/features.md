@@ -1,4 +1,5 @@
-## Glossary of acoustic features From {cite:p}`low2020automated`
+## Glossary of acoustic features 
+from {cite:ps}`low2020automated`
 ### Source Features
 
 | Acoustic feature | Description |
